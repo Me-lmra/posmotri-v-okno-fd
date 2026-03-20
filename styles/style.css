@@ -75,7 +75,7 @@ ol {
 
 .result__video {
     object-fit: cover;
-    height: 386px;
+    height: 100%;
     width: 100%;
 }
 
@@ -123,6 +123,10 @@ ol {
     border-bottom: 1px solid #fff;
     font-family: inherit;
     font-size: inherit;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .search-form__textfield::placeholder {
@@ -169,13 +173,9 @@ ol {
     opacity: 1;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
     text-decoration: underline;
     cursor: pointer;
-}
-
-.search-form__pseudo-checkbox:hover + .search-form__label-text {
-    text-decoration: underline;
 }
 
 .button {
@@ -219,7 +219,7 @@ ol {
 }
 
 .title {
-    font-family: Oswald, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 75px;
     font-weight: 700;
     line-height: 94%;
@@ -233,8 +233,7 @@ ol {
 .content__list-container {
     position: relative;
     display: flex;
-    overflow: scroll;
-    overflow-x: auto;
+    overflow: auto;
     flex-wrap: wrap;
     gap: 30px;
     height: 298px;
@@ -268,9 +267,11 @@ ol {
 }
 
 .content__video-card-title {
-    font-family: Oswald, sans-serif;
+    padding-bottom: 6px;
+    font-family: 'Oswald', sans-serif;
     font-size: 30px;
     font-weight: 700;
+    line-height: 100%;
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
@@ -292,7 +293,7 @@ ol {
 .content__video-card-description {
     line-height: 16.2px;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
